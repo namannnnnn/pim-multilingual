@@ -9,20 +9,23 @@ dotenv.config();
 
 export class TranslateService {
 
-    private googleTranslator;
 
     constructor(
      ) {}
 
-    onModuleInit() {
-        this.googleTranslator = new Translate({
+   
+
+    async translate( text : Array<string> | string, target_language : string ) : Promise<any> {
+
+        let googleTranslator;
+
+
+        googleTranslator = new Translate({
             projectId:'intricate-yew-367406',
             keyFilename: String(process.env.GOOGLE_APPLICATION_CREDENTIALS)
         });
-    }
 
-    async translate( text : Array<string> | string, target_language : string ) : Promise<any> {
-        let [translations] = await this.googleTranslator.translate(text, target_language);
+        let [translations] = await googleTranslator.translate(text, target_language);
         translations = Array.isArray(translations) ? translations : [translations];
         return translations;
 
