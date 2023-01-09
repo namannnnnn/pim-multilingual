@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { forwardRef, Inject, Injectable } from '@nestjs/common';
-import { TranslateService  } from 'pim-multilingual'
+import { TranslateService } from 'pim-multilingual';
 
 @Injectable()
 export class AppService {

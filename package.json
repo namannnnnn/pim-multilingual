@@ -1,6 +1,6 @@
 {
   "name": "pim-multilingual",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "",
   "main": "dist/index.js",
@@ -26,7 +26,8 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
-    "pim-multilingual": "^0.0.1",
+    "dotenv": "^16.0.3",
+    "pim-multilingual": "^0.0.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
